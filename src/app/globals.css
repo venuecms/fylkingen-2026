@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   @font-face {
     font-family: 'ultra';
@@ -11,14 +10,15 @@
     font-style: normal;
     font-display: swap;
   }
- @font-face {
+ 
+  @font-face {
     font-family: 'diatype';
-    src: url('fonts/ABCDiatype-Regular.woff2') format('woff2');
+    src: url('fonts/diatype.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
-}
+  }
 
 html {
   --background: 300, 1%, 5%, 1;
@@ -26,7 +26,7 @@ html {
   --secondary: 120, 4%, 56%, 1;
   --muted: 120, 4%, 33%, 0.8;
   --ultra: "ultra", sans-serif;
-  --diatype: "diatype", sans-serif;
+  --diatype: diatype;
 
   /* Card surface: the active theme's background, slightly darkened.
      Resolves lazily, so per-theme --background overrides flow through. */
@@ -40,8 +40,6 @@ html.default {
   --muted: 120, 4%, 33%, 0.6;
   --nav: 0, 0%, 25%, 1;
   --overlay: 0, 0%, 84%, 0.8;
-  --ultra: "ultra", sans-serif;
-  --diatype: "diatype", sans-serif;
 
   @media (prefers-color-scheme: dark) {
     --background: 300, 1%, 5%, 1;
