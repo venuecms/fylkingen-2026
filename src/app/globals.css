@@ -27,6 +27,7 @@ html {
   --muted: 120, 4%, 33%, 0.8;
   --ultra: "ultra", sans-serif;
   --diatype: diatype;
+  --highlight: 108, 100%, 45%, 1;
 
   /* Card surface: the active theme's background, slightly darkened.
      Resolves lazily, so per-theme --background overrides flow through. */

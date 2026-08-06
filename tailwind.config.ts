@@ -20,7 +20,7 @@ export default {
         background: "hsla(var(--background))",
         card: "var(--card)",
         black: "hsla(var(--black))",
-        highlight: "hsla(var(highlight))",
+        highlight: "hsla(var(--highlight))",
         primary: "hsla(var(--primary))",
         secondary: "hsla(var(--secondary))",
         muted: "hsla(var(--muted))",
@@ -38,6 +38,7 @@ export default {
         md: ["1.125rem", "1.5rem"],
         xl: ["2rem", "2.5rem"],
         xxl: ["2.5rem", "3rem"],
+        xxxl: ["3rem", "3.25rem"],
       },
       fontFamily: {
         ultra: "var(--ultra)",

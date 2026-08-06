@@ -5,6 +5,7 @@ import { getSite } from "@venuecms/sdk-next";
 import { EventsSection } from "@/components/HomePage/EventsSection";
 import { FeaturedEventsSection } from "@/components/HomePage/FeaturedEventsSection";
 import { ProductsSection } from "@/components/HomePage/ProductsSection";
+import { ProfilesSection } from "@/components/HomePage/ProfilesSection";
 import { setupSSR } from "@/components/utils";
 
 export const generateMetadata = async ({
@@ -40,6 +41,7 @@ const Home = async ({ params }: { params: Promise<Params> }) => {
       <FeaturedEventsSection locale={locale} />
       <EventsSection locale={locale} />
       <ProductsSection />
+      <ProfilesSection />
     </div>
   );
 };

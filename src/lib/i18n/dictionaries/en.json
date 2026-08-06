@@ -8,5 +8,10 @@
     "past_events": "Past Events",
     "see_all_upcoming_events": "see all upcoming events",
     "events": "Events"
+  },
+    "homepage": {
+    "org_statement": "Fylkingen is an artist-run organisation.",
+    "explore_members": "Find out more about our members",
+    "apply_for_membership": "Apply for membership"
   }
 }

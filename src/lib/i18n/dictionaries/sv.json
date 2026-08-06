@@ -8,5 +8,10 @@
     "past_events": "Tidigare evenemang",
     "see_all_upcoming_events": "se alla kommande evenemang",
     "events": "Evenemang"
+  },
+    "homepage": {
+    "org_statement": "Fylkingen är en konstnär-driven organisation.",
+    "explore_members": "Lär dig mer om våra medlemmar",
+    "apply_for_membership": "Ansök om medlemskap"
   }
 }
