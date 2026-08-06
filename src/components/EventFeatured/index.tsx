@@ -52,7 +52,7 @@ export const EventFeatured = ({
               })}
             </Link>
           </div>
-          <div className="font-ultra text-xl lowercase text-primary">
+          <div className="font-ultra text-xxl text-balance lowercase text-primary">
             <Link href={`/events/${event.slug}`}>{content.title}</Link>
             {location ? (
               <LocationLink className="pt-2 text-2xl" location={location} />

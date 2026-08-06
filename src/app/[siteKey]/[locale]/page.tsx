@@ -36,11 +36,11 @@ const Home = async ({ params }: { params: Promise<Params> }) => {
   const { locale } = await params;
 
   return (
-    <>
+    <div className="font-diatype">
       <FeaturedEventsSection locale={locale} />
       <EventsSection locale={locale} />
       <ProductsSection />
-    </>
+    </div>
   );
 };
 

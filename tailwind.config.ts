@@ -35,8 +35,9 @@ export default {
       },
       fontSize: {
         sm: ["1rem", "1.5rem"],
-        md: ["1rem", "1.5rem"],
+        md: ["1.125rem", "1.5rem"],
         xl: ["2rem", "2.5rem"],
+        xxl: ["2.5rem", "3rem"],
       },
       fontFamily: {
         ultra: "var(--ultra)",
