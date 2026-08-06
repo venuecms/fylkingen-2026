@@ -14,13 +14,14 @@ export const NavMenuDesktop = ({
 }) => {
   const { isActive } = useSearchQuery();
 
+  // placeholder navigation items
+
   return (
-    <nav className="relative hidden w-full items-center justify-between sm:flex">
-      {!isActive ? (
-        <ol className="mr-8 flex items-center gap-8 text-sm text-nav">
-          {children}
-        </ol>
-      ) : null}
+    <nav className="hidden md:flex md:gap-6">
+      <div>LOG IN</div>
+      <div>SEARCH</div>
+      <div>MENU</div>
+
       {showSearch ? <SearchInput /> : null}
     </nav>
   );
