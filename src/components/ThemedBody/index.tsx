@@ -170,13 +170,7 @@ export const ThemedBody = async ({ children }: { children: ReactNode }) => {
                 font-style: normal;
                 font-display: swap;
               }
-                   @font-face {
-                font-family: 'diatype';
-                src: url('fonts/ABCDiatype-Regular.woff2') format('woff2');
-                font-weight: normal;
-                font-style: normal;
-                font-display: swap;
-              }
+                 
             `}
           </style>
         )}
