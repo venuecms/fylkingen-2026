@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: 'ultra';
+    src: url('fonts/ABCDiatype-Ultra.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+ @font-face {
+    font-family: 'diatype';
+    src: url('fonts/ABCDiatype-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
 html {
   --background: 300, 1%, 5%, 1;
   --primary: 120, 25%, 90%, 1;

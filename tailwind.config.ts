@@ -38,6 +38,10 @@ export default {
         md: ["1rem", "1.5rem"],
         xl: ["2rem", "2.5rem"],
       },
+      fontFamily: {
+        ultra: "var(--ultra)",
+        diatype: "var(--diatype)",
+      },
       fontWeight: {
         light: "300",
         regular: "500",

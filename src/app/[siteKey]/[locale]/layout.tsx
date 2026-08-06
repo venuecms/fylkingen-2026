@@ -60,7 +60,7 @@ const RootLayout = ({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className="font-base m-auto bg-background px-0 font-regular text-primary antialiased sm:max-w-[128rem] sm:px-0">
+      <body className="font-diatype m-auto bg-background px-0 text-primary antialiased sm:max-w-[128rem] sm:px-0">
         <Suspense fallback={<Loading />}>
           <LayoutContent params={params}>{children}</LayoutContent>
         </Suspense>
