@@ -25,6 +25,8 @@ html {
   --primary: 120, 25%, 90%, 1;
   --secondary: 120, 4%, 56%, 1;
   --muted: 120, 4%, 33%, 0.8;
+  --ultra: "ultra", sans-serif;
+  --diatype: "diatype", sans-serif;
 
   /* Card surface: the active theme's background, slightly darkened.
      Resolves lazily, so per-theme --background overrides flow through. */
@@ -38,6 +40,8 @@ html.default {
   --muted: 120, 4%, 33%, 0.6;
   --nav: 0, 0%, 25%, 1;
   --overlay: 0, 0%, 84%, 0.8;
+  --ultra: "ultra", sans-serif;
+  --diatype: "diatype", sans-serif;
 
   @media (prefers-color-scheme: dark) {
     --background: 300, 1%, 5%, 1;

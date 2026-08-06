@@ -59,7 +59,7 @@ const ArchivePage = async ({
   return (
     <TwoColumnLayout>
       <ColumnLeft className="text-sm text-secondary">
-        <p className="font-medium text-primary">{pageTitle}</p>
+        <p className="text-primary">{pageTitle}</p>
       </ColumnLeft>
       <ColumnRight>
         {events?.records.length ? (

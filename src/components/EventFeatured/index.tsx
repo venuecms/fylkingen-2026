@@ -4,12 +4,12 @@ import {
   getLocalizedContent,
 } from "@venuecms/sdk-next";
 import { VenueContent } from "@venuecms/sdk-next";
-
-import { VenueImage } from "@/components/VenueImage";
 import { useLocale } from "next-intl";
 
 import { Link } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+
+import { VenueImage } from "@/components/VenueImage";
 
 import { LocationLink } from "../LocationLink";
 import { TicketList } from "../TicketList";
@@ -52,7 +52,7 @@ export const EventFeatured = ({
               })}
             </Link>
           </div>
-          <div className="text-xl text-primary">
+          <div className="font-ultra text-xl lowercase text-primary">
             <Link href={`/events/${event.slug}`}>{content.title}</Link>
             {location ? (
               <LocationLink className="pt-2 text-2xl" location={location} />
