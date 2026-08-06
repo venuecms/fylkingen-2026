@@ -8,8 +8,8 @@ export const SiteHeaderMobile = async ({
   nav: ReactNode;
 }) => {
   return (
-    <header className="top-0 flex w-full items-center justify-between py-6 text-nav sm:hidden">
-      {logo}
+    <header className="top-0 flex w-full items-center justify-between px-2 py-2 text-nav">
+      FYLKINGEN
       {nav}
     </header>
   );

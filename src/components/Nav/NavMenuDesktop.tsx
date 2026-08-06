@@ -17,7 +17,7 @@ export const NavMenuDesktop = ({
   // placeholder navigation items
 
   return (
-    <nav className="hidden md:flex md:gap-6">
+    <nav className="hidden">
       <div>LOG IN</div>
       <div>SEARCH</div>
       <div>MENU</div>

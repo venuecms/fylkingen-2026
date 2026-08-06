@@ -15,7 +15,7 @@ export const SiteHeaderDesktop = async ({
   nav: ReactNode;
 }) => {
   return (
-    <header className="top-0 hidden min-h-8 items-center text-nav sm:flex lg:gap-40">
+    <header className="top-0 hidden min-h-8 items-center text-nav lg:gap-40">
       <TwoColumnLayout className="grid-cols-2 px-2 py-0 pt-2 md:py-2 lg:py-2">
         <div className="w-full">
           <h1 className="uppercase text-nav">
