@@ -21,7 +21,7 @@ export async function ProductsContent() {
   return (
     <section className="py-20">
       <p className="pb-8 text-primary">
-        <Link href="/shop">Works</Link>
+        <Link href="/shop">Records & Books</Link>
       </p>
 
       <div className="grid grid-cols-2 gap-8 pb-20 sm:max-w-full sm:grid-cols-4 xl:grid-cols-4">
