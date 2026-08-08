@@ -15,11 +15,6 @@ export async function ProductsContent() {
 
   if (!site) return null;
 
-  // Only show for specific sites
-  if (site.name !== "ELNA" && site.name !== "infant tree") {
-    return null;
-  }
-
   const topProducts = products?.records.slice(0, 4);
   const moreProducts = products?.records.slice(4);
 
