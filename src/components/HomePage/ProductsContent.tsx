@@ -5,11 +5,13 @@ import { Link } from "@/lib/i18n";
 
 import { ListProduct } from "@/components/ListProduct";
 
+import { TranslatedText } from "../TranslatedText";
+
 export async function ProductsContent() {
   await connection();
 
   const [{ data: products }, { data: site }] = await Promise.all([
-    getProducts({ limit: 10 }),
+    getProducts({ limit: 4 }),
     getSite(),
   ]);
 
@@ -20,11 +22,7 @@ export async function ProductsContent() {
 
   return (
     <section className="py-20">
-      <p className="pb-8 text-primary">
-        <Link href="/shop">Records & Books</Link>
-      </p>
-
-      <div className="grid grid-cols-2 gap-8 pb-20 sm:max-w-full sm:grid-cols-4 xl:grid-cols-4">
+      <div className="xxl:grid-cols-3 grid grid-cols-1 gap-24 p-8 sm:max-w-full md:grid-cols-2 md:p-12 lg:p-24">
         {topProducts?.length
           ? topProducts.map((product) => (
               <ListProduct
@@ -43,11 +41,13 @@ export async function ProductsContent() {
           ))}
         </div>
       ) : null}
-      <div className="w-full grid-cols-3 sm:grid">
-        <span></span>
-        <span></span>
-        <Link className="flex w-full sm:relative sm:flex-row" href="/shop">
-          → see all works
+
+      <div className="relative top-10 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border border-highlight bg-background px-8 py-4 sm:grid lg:-top-10">
+        <Link
+          className="flex w-full items-center gap-2 font-ultra hover:text-highlight hover:brightness-125 sm:relative sm:flex-row"
+          href="/shop"
+        >
+          <TranslatedText namespace="products" text="see_all_products" />
         </Link>
       </div>
     </section>
