@@ -27,6 +27,7 @@ export default {
         card: "var(--card)",
         black: "hsla(var(--black))",
         highlight: "hsla(var(--highlight))",
+        "highlight-secondary": "hsla(var(--highlight-secondary))",
         primary: "hsla(var(--primary))",
         secondary: "hsla(var(--secondary))",
         muted: "hsla(var(--muted))",

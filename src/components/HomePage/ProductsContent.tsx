@@ -21,7 +21,7 @@ export async function ProductsContent() {
   const moreProducts = products?.records.slice(4);
 
   return (
-    <section className="py-20">
+    <section className="border-highlight-secondary border-b pt-20">
       <div className="xxl:grid-cols-3 grid grid-cols-1 gap-24 p-8 sm:max-w-full md:grid-cols-2 md:p-12 lg:p-24">
         {topProducts?.length
           ? topProducts.map((product) => (
@@ -34,22 +34,12 @@ export async function ProductsContent() {
             ))
           : "No products found"}
       </div>
-      {moreProducts?.length ? (
-        <div className="grid grid-cols-2 gap-8 sm:max-w-full lg:grid-cols-[repeat(4,minmax(1rem,32rem))] xl:grid-cols-[repeat(6,minmax(1rem,32rem))]">
-          {moreProducts.map((product) => (
-            <ListProduct key={product.slug} product={product} site={site} />
-          ))}
-        </div>
-      ) : null}
 
-      <div className="relative top-10 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border border-highlight bg-background px-8 py-4 sm:grid lg:-top-10">
-        <Link
-          className="flex w-full items-center gap-2 font-ultra hover:text-highlight hover:brightness-125 sm:relative sm:flex-row"
-          href="/shop"
-        >
+      <Link className="group relative top-9" href="/shop">
+        <span className="group-hover:text-highlight-secondary border-highlight-secondary mx-auto w-fit grid-cols-1 items-center justify-center border border-8 bg-background px-8 py-4 font-ultra sm:relative sm:grid sm:flex-row">
           <TranslatedText namespace="products" text="see_all_products" />
-        </Link>
-      </div>
+        </span>
+      </Link>
     </section>
   );
 }

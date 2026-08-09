@@ -39,7 +39,7 @@ export async function EventsContent({ locale }: { locale: string }) {
             ))}
           </EventsListHome>
           {events.records.length >= 6 ? (
-            <div className="z-100 relative -top-10 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border border-highlight bg-background px-8 py-4 sm:grid">
+            <div className="z-100 relative -top-12 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border-8 border-highlight bg-background px-8 py-4 sm:grid">
               <Link
                 className="flex w-full items-center gap-2 font-ultra hover:text-highlight hover:brightness-125 sm:relative sm:flex-row"
                 href="/events"

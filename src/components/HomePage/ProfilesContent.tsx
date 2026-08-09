@@ -18,7 +18,7 @@ export async function ProfilesContent() {
   if (!site) return null;
 
   return (
-    <section className="flex flex-col gap-4 px-2 py-20 font-ultra text-xl sm:gap-0 md:text-xxl">
+    <section className="flex flex-col gap-4 px-2 pt-20 font-ultra text-xl sm:gap-0 md:text-xxl">
       <TranslatedText namespace="homepage" text="org_statement" />
       <div className="flex flex-col-reverse gap-4 pb-6 text-xl md:text-xxl lg:items-center xl:flex-row xl:gap-8">
         <div className="flex flex-col gap-4 sm:flex-row md:text-nowrap lg:items-center">
@@ -45,13 +45,13 @@ export async function ProfilesContent() {
           </Link>
         </div>
       </div>
-      <div className="xxl:grid-cols-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="xxl:grid-cols-6 grid grid-cols-2 gap-0.5 border-b border-highlight md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {profiles?.records.map((profile) => (
           <ProfileMember key={profile.slug} profile={profile} />
         ))}
       </div>
 
-      <div className="z-100 relative -top-8 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border border-highlight bg-background px-8 py-4 text-md sm:grid">
+      <div className="z-100 relative -top-9 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border-8 border-highlight bg-background px-8 py-4 text-md sm:grid">
         <Link
           className="flex w-full items-center gap-2 font-ultra hover:text-highlight hover:brightness-125 sm:relative sm:flex-row"
           href="/events"

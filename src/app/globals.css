@@ -28,6 +28,7 @@ html {
   --ultra: "ultra", sans-serif;
   --diatype: diatype;
   --highlight: 108, 100%, 45%, 1;
+  --highlight-secondary: 26, 100%, 42%, 1;
 
   /* Card surface: the active theme's background, slightly darkened.
      Resolves lazily, so per-theme --background overrides flow through. */
