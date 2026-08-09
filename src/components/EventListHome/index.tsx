@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { VenueImage } from "@/components/VenueImage";
 
 import { LocationLink } from "../LocationLink";
+import { TranslatedText } from "../TranslatedText";
 import { formatDateRange } from "../utils";
 
 export const EventsListHome = ({
@@ -20,7 +21,7 @@ export const EventsListHome = ({
   return (
     <div
       className={cn(
-        "font-diatype flex flex-col gap-0.5 px-1 sm:grid sm:grid-flow-row sm:grid-cols-3",
+        "flex flex-col gap-0.5 px-1 font-diatype sm:grid sm:grid-flow-row sm:grid-cols-3",
         className,
       )}
     >
@@ -61,7 +62,7 @@ export const EventCard = ({
             className={cn("w-full overflow-hidden sm:max-w-full", className)}
           >
             <VenueImage
-              className="group-hover:scale-102 transition-transform duration-1000 group-hover:-translate-x-0.5 group-hover:-translate-y-1"
+              className="transition-transform duration-1000 group-hover:-translate-x-0.5 group-hover:-translate-y-1 group-hover:scale-102"
               image={displayImage}
               aspect="square"
             />
@@ -88,16 +89,19 @@ export const EventCard = ({
                 isCancelled && "line-through",
               )}
             >
-              <h2 className="font-ultra text-balance text-md">
+              <h2 className="text-balance font-ultra text-md">
                 <Link href={`/events/${event.slug}`}>{content.title}</Link>
               </h2>
             </div>
 
             <div className="transition-translate pt-0.5 text-sm text-highlight opacity-0 duration-1000 group-hover:-translate-y-0.5 group-hover:opacity-100">
               {!isCancelled && event.tickets?.length ? (
-                <span>Info + Tickets</span>
+                <div>
+                  <TranslatedText namespace="events" text="more_info" /> +{" "}
+                  <TranslatedText namespace="events" text="tickets" />
+                </div>
               ) : (
-                <span>More Info</span>
+                <TranslatedText namespace="events" text="more_info" />
               )}
             </div>
             {isCancelled ? <div className="">Cancelled</div> : null}
