@@ -33,7 +33,7 @@ export const ProfileMember = ({ profile }: { profile: VenueProfile }) => {
 
         <div className="absolute inset-0 bg-gray-900 opacity-30 transition-opacity duration-700 group-hover:opacity-90"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="font-ultra hidden text-balance text-center text-xl transition-transform duration-100 group-hover:block">
+          <h2 className="hidden text-balance text-center font-ultra text-xl transition-transform duration-100 group-hover:block">
             {content.title}
           </h2>
         </div>

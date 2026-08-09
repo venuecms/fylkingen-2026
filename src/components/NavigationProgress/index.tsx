@@ -80,7 +80,7 @@ export const NavigationProgress = () => {
   return (
     <div className="fixed left-0 right-0 top-0 z-50 h-0.5">
       <div
-        className="h-full bg-secondary transition-all duration-150 ease-out"
+        className="h-full bg-highlight transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>
