@@ -1,7 +1,6 @@
 import { LocalizedContent, getLocalizedContent } from "@venuecms/sdk-next";
 import { VenueContent } from "@venuecms/sdk-next";
 import { getEvents, getSite } from "@venuecms/sdk-next";
-import { ArrowRight } from "lucide-react";
 import { connection } from "next/server";
 
 import { Link } from "@/lib/i18n";

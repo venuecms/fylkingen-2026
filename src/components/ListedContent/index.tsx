@@ -4,9 +4,8 @@ import {
   VenueContent,
   VenueImage,
 } from "@venuecms/sdk-next";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
 
 import { renderedStyles } from "@/components/utils/styles";
 
@@ -44,11 +43,16 @@ export const ListedContent = ({
       <div className="absolute inset-0 bg-gradient-to-t from-green-100 opacity-10"></div>
 
       <Link href="">
-        <div className="items-left absolute inset-0 flex h-fit max-h-screen w-fit max-w-[40rem] flex-col justify-center gap-4 border border-highlight bg-background p-12 transition-transform duration-1000 group-hover:scale-102 md:mb-40 md:ml-auto md:mr-48 md:mt-auto">
+        <div className="group/title items-left absolute inset-0 flex h-fit max-h-screen w-fit max-w-[40rem] flex-col justify-center gap-4 border border-highlight bg-background p-12 transition-transform duration-1000 group-hover:scale-102 md:mb-40 md:ml-auto md:mr-48 md:mt-auto">
           {title && (
-            <h1 className="font-ultra text-xl">
-              {titleLink ? <Link href={titleLink}>{title}</Link> : title}
-            </h1>
+            <div className="flex flex-row items-center gap-0">
+              <div>
+                <h1 className="font-ultra text-xl group-hover/title:text-highlight">
+                  {titleLink ? <Link href={titleLink}>{title}</Link> : title}{" "}
+                </h1>
+              </div>
+              <ArrowRight className="text-highlight opacity-0 transition-transform duration-1000 group-hover/title:translate-x-6 group-hover/title:opacity-100" />
+            </div>
           )}
 
           {typeof content === "string" && (
