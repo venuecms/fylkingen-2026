@@ -11,11 +11,13 @@ import { TranslatedText } from "@/components/TranslatedText";
 import { ColumnLeft, ColumnRight, TwoColumnLayout } from "@/components/layout";
 import { renderedStyles } from "@/components/utils";
 
+import { EventCard, EventsListHome } from "../EventListHome";
+
 export async function EventsContent({ locale }: { locale: string }) {
   await connection();
 
   const [{ data: events }, { data: site }] = await Promise.all([
-    getEvents({ limit: 6, upcoming: true }),
+    getEvents({ limit: 9, upcoming: true }),
     getSite(),
   ]);
 
@@ -29,52 +31,41 @@ export async function EventsContent({ locale }: { locale: string }) {
     : { content: { content: site.description } as LocalizedContent };
 
   return (
-    <TwoColumnLayout>
-      <ColumnLeft className="hidden text-sm text-secondary sm:flex">
-        {siteContent ? (
+    <section className="flex flex-col gap-1">
+      {events?.records.length ? (
+        <section className="flex flex-col gap-3">
+          <EventsListHome>
+            {events.records.map((event) => (
+              <EventCard key={event.id} event={event} site={site} withImage />
+            ))}
+          </EventsListHome>
+          {events.records.length >= 9 ? (
+            <div className="w-full grid-cols-1 gap-12 sm:grid">
+              <span></span>
+              <Link
+                className="flex w-full items-center gap-2 hover:brightness-125 sm:relative sm:flex-row"
+                href="/events"
+              >
+                <ArrowRight className="h-4" />{" "}
+                <TranslatedText
+                  namespace="events"
+                  text="see_all_upcoming_events"
+                />
+              </Link>
+            </div>
+          ) : null}
+        </section>
+      ) : null}
+
+      {siteContent ? (
+        <div className="flex sm:hidden">
           <VenueContent
             className="flex flex-col gap-6"
             content={siteContent}
             contentStyles={renderedStyles}
           />
-        ) : null}
-      </ColumnLeft>
-      <ColumnRight>
-        {events?.records.length ? (
-          <section className="flex flex-col gap-3">
-            <EventsList>
-              {events.records.map((event) => (
-                <ListEvent key={event.id} event={event} site={site} />
-              ))}
-            </EventsList>
-            {events.records.length >= 6 ? (
-              <div className="w-full grid-cols-1 gap-12 sm:grid">
-                <span></span>
-                <Link
-                  className="flex w-full items-center gap-2 hover:brightness-125 sm:relative sm:flex-row"
-                  href="/events"
-                >
-                  <ArrowRight className="h-4" />{" "}
-                  <TranslatedText
-                    namespace="events"
-                    text="see_all_upcoming_events"
-                  />
-                </Link>
-              </div>
-            ) : null}
-          </section>
-        ) : null}
-
-        {siteContent ? (
-          <div className="flex sm:hidden">
-            <VenueContent
-              className="flex flex-col gap-6"
-              content={siteContent}
-              contentStyles={renderedStyles}
-            />
-          </div>
-        ) : null}
-      </ColumnRight>
-    </TwoColumnLayout>
+        </div>
+      ) : null}
+    </section>
   );
 }

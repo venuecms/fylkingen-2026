@@ -3,6 +3,7 @@ import { MediaItem, VenueImage as SdkVenueImage } from "@venuecms/sdk-next";
 const ASPECTS = {
   square: "aspect-square",
   video: "aspect-video",
+  insta: "aspect-[4/3]",
 };
 
 export const VenueImage = ({

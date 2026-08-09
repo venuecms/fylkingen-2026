@@ -45,7 +45,7 @@ export async function ProfilesContent() {
           </Link>
         </div>
       </div>
-      <div className="xxl:grid-cols-6 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="xxl:grid-cols-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {profiles?.records.map((profile) => (
           <ProfileMember key={profile.slug} profile={profile} />
         ))}

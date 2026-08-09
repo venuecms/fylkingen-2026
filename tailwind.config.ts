@@ -16,6 +16,12 @@ export default {
   ],
   theme: {
     extend: {
+      scale: {
+        "102": "1.02",
+      },
+      aspect: {
+        insta: "4/3",
+      },
       colors: {
         background: "hsla(var(--background))",
         card: "var(--card)",
