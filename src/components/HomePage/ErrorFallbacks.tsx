@@ -24,3 +24,7 @@ export function ProductsError() {
 export function ProfilesError() {
   return null; // Profiles are optional and site-specific, so hide on error
 }
+
+export function FeaturedPageError() {
+  return null; // Featured Pages are optional and site-specific, so hide on error
+}

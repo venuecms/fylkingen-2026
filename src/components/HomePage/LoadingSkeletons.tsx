@@ -71,6 +71,33 @@ export function EventsSkeleton() {
   );
 }
 
+export function FeaturedPageSkeleton() {
+  return (
+    <TwoColumnLayout>
+      <ColumnLeft className="hidden text-sm text-secondary sm:flex">
+        <div className="flex flex-col gap-2">
+          <Skeleton />
+          <Skeleton />
+          <Skeleton className="w-3/4" />
+        </div>
+      </ColumnLeft>
+      <ColumnRight>
+        <EventsList>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} className="flex flex-col gap-8 pb-8 sm:gap-0">
+              <div className="flex flex-col gap-1">
+                <Skeleton className="w-32" />
+                <Skeleton className="w-48" />
+                <Skeleton className="w-24" />
+              </div>
+            </div>
+          ))}
+        </EventsList>
+      </ColumnRight>
+    </TwoColumnLayout>
+  );
+}
+
 export function ProductsSkeleton() {
   return (
     <section className="py-20">
