@@ -18,9 +18,9 @@ export async function ProfilesContent() {
   if (!site) return null;
 
   return (
-    <section className="md:text-xxl font-ultra flex flex-col gap-4 px-2 py-20 text-xl sm:gap-0">
+    <section className="flex flex-col gap-4 px-2 py-20 font-ultra text-xl sm:gap-0 md:text-xxl">
       <TranslatedText namespace="homepage" text="org_statement" />
-      <div className="md:text-xxl flex flex-col-reverse gap-4 pb-6 text-xl lg:items-center xl:flex-row xl:gap-8">
+      <div className="flex flex-col-reverse gap-4 pb-6 text-xl md:text-xxl lg:items-center xl:flex-row xl:gap-8">
         <div className="flex flex-col gap-4 sm:flex-row md:text-nowrap lg:items-center">
           <TranslatedText namespace="homepage" text="explore_members" />
           <ArrowDown
@@ -49,6 +49,15 @@ export async function ProfilesContent() {
         {profiles?.records.map((profile) => (
           <ProfileMember key={profile.slug} profile={profile} />
         ))}
+      </div>
+
+      <div className="z-100 relative -top-8 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border border-highlight bg-background px-8 py-4 text-md sm:grid">
+        <Link
+          className="flex w-full items-center gap-2 font-ultra hover:text-highlight hover:brightness-125 sm:relative sm:flex-row"
+          href="/events"
+        >
+          <TranslatedText namespace="profiles" text="see_all_profiles" />
+        </Link>
       </div>
     </section>
   );
