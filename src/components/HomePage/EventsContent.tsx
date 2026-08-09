@@ -17,7 +17,7 @@ export async function EventsContent({ locale }: { locale: string }) {
   await connection();
 
   const [{ data: events }, { data: site }] = await Promise.all([
-    getEvents({ limit: 9, upcoming: true }),
+    getEvents({ limit: 6, upcoming: true }),
     getSite(),
   ]);
 
@@ -39,14 +39,12 @@ export async function EventsContent({ locale }: { locale: string }) {
               <EventCard key={event.id} event={event} site={site} withImage />
             ))}
           </EventsListHome>
-          {events.records.length >= 9 ? (
-            <div className="w-full grid-cols-1 gap-12 sm:grid">
-              <span></span>
+          {events.records.length >= 6 ? (
+            <div className="z-100 relative -top-10 mx-auto w-fit grid-cols-1 items-center justify-center gap-12 border border-highlight bg-background px-8 py-4 sm:grid">
               <Link
-                className="flex w-full items-center gap-2 hover:brightness-125 sm:relative sm:flex-row"
+                className="flex w-full items-center gap-2 font-ultra hover:text-highlight hover:brightness-125 sm:relative sm:flex-row"
                 href="/events"
               >
-                <ArrowRight className="h-4" />{" "}
                 <TranslatedText
                   namespace="events"
                   text="see_all_upcoming_events"

@@ -21,7 +21,7 @@ export const EventsListHome = ({
   return (
     <div
       className={cn(
-        "flex flex-col gap-0.5 px-1 font-diatype sm:grid sm:grid-flow-row sm:grid-cols-3",
+        "flex flex-col gap-0.5 px-1 font-diatype sm:grid sm:grid-flow-row md:grid-cols-2 xl:grid-cols-3",
         className,
       )}
     >
